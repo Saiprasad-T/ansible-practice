@@ -8,4 +8,4 @@
   - name: checking while
     ansible.builtin.debug:
       msg: "{{ Number_of_sessions }} are more than 10"
-    when: Number_of_sessions > 9
+    when: Number_of_sessions < 5
