@@ -1,0 +1,11 @@
+- name: practising variables and defining variables
+  hosts: local
+  become: yes
+  vars:
+    course: DevOps with AWS
+    Trainer: siva
+    Hours: 140+
+  tasks:
+  - name: printing the course details
+    ansible.builtin.debug:
+      msg: Hi iam learning {{ course }} and is {{ Trainer }} and {{ Hours}}
