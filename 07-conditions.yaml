@@ -1,0 +1,11 @@
+- name: practising conditions in ansible
+  hosts: local
+  connection: local
+  become: yes
+  vars:
+    Number_of_sessions: 10
+  tasks:
+  - name: checking while
+    ansible.builtin.debug:
+      msg: "{{ Number_of_sessions }} are more than 10"
+    when: Number_of_sessions > 9
