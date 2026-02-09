@@ -7,14 +7,17 @@
     prompt: enter the number
     private: false
   tasks:
-  - name: checking the value
+  - name: as you have entered 1 nginx will be installed
     ansible.builtin.package:
      name: nginx
      state: present
     when: choice == "1"
-  - name:  if the number is 2 then install httpd
+  - name:  as you have entered 2 httpd will be installed
     ansible.builtin.package:
      name: httpd
      state: present
     when: choice == "2"
+  - name: printing the values
+    ansible.builtin.debug:
+      msg: "request completed based on your input"
   
