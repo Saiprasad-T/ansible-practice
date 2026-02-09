@@ -1,0 +1,10 @@
+- name: installing nginx and printing the content as part of practice
+  hosts: web
+  tasks:
+  - name: printing the content as part of practice
+    ansible.builtin.debug:
+      msg: "Installing nginx and practising ansible and also debug module"
+  - name: installing nginx in to our server
+    ansible.builtin.package:
+      name: nginx
+      state: present
