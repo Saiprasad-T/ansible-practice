@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars_file:
-  - vars.yml
+   - vars.yml
   tasks:
   - name: variables on task level
     vars:
