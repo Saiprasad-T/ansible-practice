@@ -15,3 +15,8 @@
       ansible.builtin.debug:
         msg: "{{ app }} successfully installed"
 
+    - name: starting the service
+      ansible.builtin.service:
+        name: "{{ app }}"
+        state: started
+        enabled: yes
