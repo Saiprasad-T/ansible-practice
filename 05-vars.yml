@@ -1,4 +1,4 @@
-- name: practising prompt
+- name: taking inputs from the user through terminal using prompts
   hosts: local
   connection: local
   vars_prompt:
@@ -8,7 +8,6 @@
   - name: password
     prompt: please enter your password
     private: true
-  tasks:
-  - name: printing from prompts
+  - tasks:
     ansible.builtin.debug:
-     msg: "printing {{ username }} and user password {{ password }}"
+      msg: "username is {{ username }} and password is {{ password }}"
