@@ -1,5 +1,6 @@
 - name: installing nginx and printing the content as part of practice and this is part of play
   hosts: web
+  become: yes
   tasks:
   - name: printing the content as part of practice
     ansible.builtin.debug:
