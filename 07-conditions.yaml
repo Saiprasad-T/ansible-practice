@@ -2,10 +2,19 @@
   hosts: local
   connection: local
   become: yes
-  vars:
-    Number_of_sessions: 10
+  vars_prompt:
+  - name: choice
+    prompt: enter the number
+    private: false
   tasks:
-  - name: checking while
-    ansible.builtin.debug:
-      msg: "{{ Number_of_sessions }} are more than 10"
-    when: Number_of_sessions < 5
+  - name: checking the value
+    ansible.builtin.package:
+     name: nginx
+     state: present
+    when: choice == "1"
+  - name:  if the number is 2 then install httpd
+    ansible.builtin.package:
+     name: httpd
+     state: present
+    when: choice == "2"
+  
