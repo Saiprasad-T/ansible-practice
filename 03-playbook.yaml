@@ -1,10 +1,11 @@
 - name: practising variables and defining variables
   hosts: local
+  connection: local
   become: yes
   vars:
-    course: DevOps with AWS
-    Trainer: siva
-    Hours: 140+
+    course: "DevOps with AWS"
+    Trainer: "siva"
+    Hours: "140+"
   tasks:
   - name: printing the course details
     ansible.builtin.debug:
