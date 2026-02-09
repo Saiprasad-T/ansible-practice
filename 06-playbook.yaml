@@ -8,3 +8,4 @@
   - tasks:
     ansible.builtin.pacakage:
     - name: {{ Application_name }}
+      state: present
