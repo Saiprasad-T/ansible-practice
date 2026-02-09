@@ -5,7 +5,3 @@
   - name: Application_name
     prompt: please enter application name
     private: false
-  - tasks:
-    ansible.builtin.pacakage:
-    - name: {{ Application_name }}
-      state: present
