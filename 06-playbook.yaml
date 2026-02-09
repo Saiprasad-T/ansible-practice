@@ -2,15 +2,16 @@
   hosts: web
   become: yes
   vars_prompt:
-  - name: App
+  - name: app
     prompt: please enter application name
     private: false
-  - tasks:
+  tasks:
     - name: installing application
       ansible.builtin.package:
-        name: {{ App }}
+        name: "{{ app }}"
         state: present
+
     - name: printing the message
       ansible.builtin.debug:
-        msg: "{{ APP }} successfully installed"
+        msg: "{{ app }} successfully installed"
 
