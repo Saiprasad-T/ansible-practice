@@ -1,0 +1,21 @@
+- name: "saiprasad thota"
+  DOB: 09-05-2000
+  Gender: "male"
+  company: "TCS"
+  -address:
+    flat no: 104
+    Landmark: "bommarillu sarovar,ameenpur"
+    type: "current"
+  -address:
+    flat no: 104
+    Landmark: "bommarillu sarovar,ameenpur"
+    type: "permenant"
+
+- name: "Devansh sai"
+  DOB: 09-05-2021
+  Gender: "male"
+  company: "Vignan"
+  -address:
+    flat no: 104
+    Landmark: "bommarillu sarovar,ameenpur"
+    type: "current"
