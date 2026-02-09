@@ -1,4 +1,4 @@
-- name: installing nginx and printing the content as part of practice
+- name: installing nginx and printing the content as part of practice and this is part of play
   hosts: web
   tasks:
   - name: printing the content as part of practice
