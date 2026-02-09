@@ -1,0 +1,10 @@
+- name: task level variables
+  hosts: local
+  connection: local
+  tasks:
+  - name: variables on task level
+    vars:
+      COURSE: "Ansible"
+      Trainer: "Siva"
+    ansible.builtin.debug:
+      msg: currently im learning {{ COURSE }} and my trainer is {{ Trainer }}
