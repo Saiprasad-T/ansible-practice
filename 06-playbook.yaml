@@ -1,0 +1,10 @@
+- name: installing nginx server and starting it and taking the output through prompt
+  hosts: web
+  become: yes
+  vars_prompt:
+  - name: Application_name
+    prompt: please enter application name
+    private: false
+  - tasks:
+    ansible.builtin.pacakage:
+    - name: {{ Application_name }}
